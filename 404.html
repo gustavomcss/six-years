@@ -7,12 +7,12 @@
     <script>
         // Base do projeto no GitHub Pages
         const basePath = '/six-years';
-        const currentPath = window.location.pathname + window.location.search + window.location.hash;
+        const currentPath = window.location.pathname;
 
-        // Verifica se já estamos na URL correta para evitar redirecionamento infinito
-        if (!currentPath.startsWith(`${basePath}/index.html`)) {
-            const newPath = `${basePath}/index.html#${window.location.pathname.slice(basePath.length)}${window.location.search}${window.location.hash}`;
-            window.location.replace(newPath.replace(/\/+/g, '/'));
+        // Redireciona para a homepage se não estivermos nela
+        if (currentPath !== `${basePath}/`) {
+            const newPath = `${basePath}/`;
+            window.location.replace(newPath);
         }
     </script>
 </head>
