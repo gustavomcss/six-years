@@ -4,12 +4,25 @@ import './Album.css';
 // Import React Icons
 import { BsBalloonHeartFill } from "react-icons/bs";
 
+// Import React Libs
+import { useEffect, useRef } from 'react';
+
 // Import React Intersection Observer
 import { InView } from 'react-intersection-observer';
 
 const Album = () => {
     const imageCount = 48;
-    const images = Array.from({ length: imageCount }, (_, i) => `/Foto${String(imageCount - i).padStart(2, '0')}.jpg`);
+    const images = Array.from({ length: imageCount }, (_, i) => `Foto${String(imageCount - i).padStart(2, '0')}.jpg`);
+
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.addEventListener("webkitbeginfullscreen", (e) => {
+                e.preventDefault();
+            })
+        }
+    }, []);
 
     return (
         <>
@@ -21,8 +34,8 @@ const Album = () => {
 
                 <div className="albumContent">
                     <div className="albumVideo">
-                        <video autoPlay loop muted>
-                            <source src="/video.mp4" />
+                        <video ref={videoRef} autoPlay loop muted playsInline>
+                            <source src="/six-years/static/video.mp4" />
                         </video>
                     </div>
 
@@ -30,7 +43,7 @@ const Album = () => {
                         {images.map((src, index) => (
                             <InView key={index} triggerOnce={true} trackVisibility={true} delay={250}>
                                 {({ inView, ref }) => (
-                                    <img className={`fade-in-image ${inView ? "visible" : "hidden"}`} src={src} alt={`Foto ${imageCount - index}`} ref={ref}/>
+                                    <img className={`fade-in-image ${inView ? "visible" : "hidden"}`} src={`/six-years/static/${src}`} alt={`Foto ${imageCount - index}`} ref={ref}/>
                                 )}
                             </InView>
 

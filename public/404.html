@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        // Base do projeto no GitHub Pages
+        const basePath = '/six-years';
+        const currentPath = window.location.pathname;
+
+        // Redireciona para a homepage se não estivermos nela
+        if (currentPath !== `${basePath}/`) {
+            const newPath = `${basePath}/`;
+            window.location.replace(newPath);
+        }
+    </script>
+</head>
+
+<body>
+    <p>Redirecionando...</p>
+</body>
+
+</html>

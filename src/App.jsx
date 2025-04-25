@@ -34,7 +34,7 @@ function App() {
     return (
         <>
             <div className="App">
-                <BrowserRouter>
+                <BrowserRouter basename="/six-years">
                     <div id="embed-iframe"></div>
 
                     <Navbar />
