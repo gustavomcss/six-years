@@ -1,0 +1,79 @@
+/* CSS Letter */
+
+div.Letter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.25s;
+
+    margin: 0px auto;
+    padding: 16px;
+    max-width: 1024px;
+}
+
+div.Letter > h1 {
+    margin: 16px 0px;
+}
+
+div.Letter > p.heart {
+    margin-bottom: 16px;
+}
+
+div.Letter > p.heart > svg {
+    fill: red;
+    font-size: 24px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+div.Letter > div.letterContent {
+    text-align: justify;
+
+    font-size: 18px;
+}
+
+div.Letter > div.letterContent > p {
+    text-indent: 32px;
+    line-height: 28px;
+
+    margin: 8px 0px;
+}
+
+div.Letter > div.final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    margin: 32px 0px 16px 0px;
+}
+
+div.Letter > div.final > p.loveu {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+div.Letter > div.final > p.loveu > span {
+    color: #ff0000;
+}
+
+div.Letter > div.final > p.author {
+    color: #aaaaaa;
+}
+
+div.Letter > div.final > p.author > span {
+    color: #FFFFFF;
+}
+
+
+
+/* Media-Query Screen DESKTOP AND BIGGERS */
+
+@media (min-width: 992px) {
+    div.Letter > div.letterContent {
+        font-size: 16px;
+    }
+}

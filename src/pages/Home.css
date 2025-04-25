@@ -1,0 +1,81 @@
+/* CSS Home */
+
+div.Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.5s;
+
+    height: 92vh;
+}
+
+div.Home > h1 {
+    font-family: "Meow Script", cursive;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+div.Home > h1 > span {
+    font-weight: bold;
+}
+
+div.Home > p.heart > svg {
+    fill: red;
+    font-size: 24px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+
+div.Home > button {
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 50%;
+
+    padding: 2px;
+
+    cursor: pointer;
+}
+
+div.Home > button > div.svg-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+div.Home > button > div.svg-container > svg.bi-spotify {
+    fill: #1ED660;
+
+    width: 32px;
+    height: 32px;
+}
+
+div.Home > button > div.svg-container > svg.bi-arrow-up {
+    fill: #FFFFFF;
+
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/* Media-Query Screen DESKTOP AND BIGGERS */
+
+@media (min-width: 992px) {
+    div.Home > h1 {
+        font-size: 32px;
+    }
+}

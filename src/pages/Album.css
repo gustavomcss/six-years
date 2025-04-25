@@ -1,0 +1,125 @@
+/* CSS Album */
+
+div.Album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.25s;
+
+    margin: 0px auto;
+    padding: 16px;
+    max-width: 1024px;
+}
+
+div.Album > h1 {
+    margin: 16px 0px;
+}
+
+div.Album > p.heart {
+    margin-bottom: 16px;
+}
+
+div.Album > p.heart > svg {
+    fill: #ff0000;
+    font-size: 24px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+div.Album > p.subText {
+    color: #aaaaaa;
+    font-size: 16px;
+
+    text-align: center;
+
+    margin: 8px 0px;
+    max-width: 798px;
+}
+
+
+
+div.Album > div.albumContent > div.albumVideo {
+    margin: 16px 0px 32px 0px;
+}
+
+div.Album > div.albumContent > div.albumVideo > video {
+    box-shadow: 0px 0px 2px 2px rgba(255,255,255,0.25);
+    border-radius: 8px;
+    width: 100%;
+}
+
+
+
+div.Album > div.albumContent > div.albumImages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
+    gap: 16px;
+}
+
+div.Album > div.albumContent > div.albumImages > img {
+    display: block;
+    
+    object-fit: cover;
+    aspect-ratio: 1/1;
+
+    box-shadow: 0px 0px 2px 2px rgba(255,255,255,0.25);
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.fade-in-image.hidden {
+    opacity: 0;
+}
+
+.fade-in-image.visible {
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+
+
+div.Album > div.final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    margin: 32px 0px 16px 0px;
+}
+
+div.Album > div.final > p.loveu {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+div.Album > div.final > p.loveu > span {
+    color: #ff0000;
+}
+
+div.Album > div.final > p.author {
+    color: #aaaaaa;
+}
+
+div.Album > div.final > p.author > span {
+    color: #FFFFFF;
+}
+
+
+
+/* Media-Query Screen DESKTOP AND BIGGERS */
+
+@media (min-width: 992px) {
+    div.Album > p.subText {
+        font-size: 18px;
+    }
+
+    div.Album > div.albumContent > div.albumImages {
+        grid-template-columns: repeat(auto-fit, minmax(243px, 1fr));
+    }
+}

@@ -1,0 +1,32 @@
+/* CSS Clock */
+
+div.Clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    margin: 40px 0px;
+}
+
+div.Clock > p {
+    font-size: 18px;
+}
+
+div.Clock > table {
+    table-layout: fixed;
+
+    border-collapse: collapse;
+}
+
+div.Clock > table th {
+    text-align: center;
+
+    padding: 4px;
+    width: 80px;
+}
+
+div.Clock > table {
+    font-size: 18px;
+}

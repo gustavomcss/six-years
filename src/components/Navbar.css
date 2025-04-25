@@ -1,0 +1,25 @@
+/* CSS NavBar */
+
+div.Navbar {
+    background-color: #424242;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 8vh;
+}
+
+div.Navbar > nav {
+    display: flex;
+    gap: 8px;
+}
+
+div.Navbar > nav > a {
+    color: #FFFFFF;
+
+    font-size: 20px;
+
+    text-decoration: none;
+
+    padding: 4px 16px;
+}
