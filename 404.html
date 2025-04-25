@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script>
         // Redireciona para o index.html preservando a rota original
-        const pathname = window.location.pathname;
+        const pathname = window.location.pathname.replace('/six-years', '');
         const search = window.location.search;
         const hash = window.location.hash;
-        window.location.replace(`${pathname}${search}${hash}`);
+        window.location.replace(`/six-years/index.html#${pathname}${search}${hash}`);
     </script>
 </head>
+
 <body>
     <p>Redirecionando...</p>
 </body>
+
 </html>
